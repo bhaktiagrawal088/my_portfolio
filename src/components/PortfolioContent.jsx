@@ -8,11 +8,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github } from 'lucide-react';
 import LogicLomm from "../assets/Logic-Loom.jpeg";
 import JobPortal from "../assets/job_portal1.png";
-import MediaGen from "../assets/MediaGen.jpg";
-import NotesIT from "../assets/Notes It.jpg"
-import KhataBook from "../assets/walletApp.jpg"
-import Jeton from "../assets/jeton.jpg"
-import FoodWebsite from  "../assets/foodwebsite.jpg"
+import mediaGen from "../assets/MediaGen.jpg";
+import NotesIt from "../assets/Notes It.jpg"
+import walletApp from "../assets/walletApp.jpg"
+import jeton from "../assets/jeton.jpg"
+import foodwebsite from  "../assets/foodwebsite.jpg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,7 +82,7 @@ const Projects = () => {
       title: 'MediaGen',
       description:
         'A responsive stock media platform with advanced search/filtering, favorites, dark/light modes, and Material 3 UI design, developed.',
-      image: MediaGen,
+      image: mediaGen,
       tech: ['JavaScript ', 'HTML', 'CSS', 'Material UI', 'VS Code', 'Git '],
       github: 'https://github.com/bhaktiagrawal088/MediaGen',
       live: 'https://stock-media-platform.vercel.app/',
@@ -91,7 +91,7 @@ const Projects = () => {
       title: 'NOTE IT',
       description: 
       'Developed a feature-rich notes application  to provide a modern and responsive user interface. The application allows users to create, edit, delete, and organize notes into various categories.',
-      image: NotesIT,
+      image: NotesIt,
       tech: [ 'React', 'Tailwind CSS', 'Redux Toolkit', 'Vite'],
       github: 'https://github.com/bhaktiagrawal088/News_App',
       live: 'https://notes-app-pi-brown.vercel.app/',
@@ -100,7 +100,7 @@ const Projects = () => {
       title: 'Khata Book',
       description: 
       'A cross-platform expense tracker with secure authentication, live balance updates, and a cloud-hosted backend for Android and iOS.',
-      image: KhataBook,
+      image: walletApp,
       tech: [ 'React Native', 'Expo', 'Clerk', 'Express.js', 'PostgreSQL (Neon)', 'Redis' ],
       github: 'https://github.com/bhaktiagrawal088/Khata-Book',
     },
@@ -110,7 +110,7 @@ const Projects = () => {
       title: 'Jeton',
       description:
       'A modern, animated landing page clone showcasing smooth interactions. Sleek and responsive Jeton featuring smooth scroll and interactive effects.',
-      image: Jeton,
+      image: jeton,
       tech: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
       github: 'https://github.com/bhaktiagrawal088/Jeton_clone',
       live: 'https://jeton-clone-iota.vercel.app/',
@@ -119,7 +119,7 @@ const Projects = () => {
       title: 'Tajtaazagi catters',
       description:
       'Enhanced and modernized the existing site (tajtaazagicatters).',
-      image: FoodWebsite,
+      image: foodwebsite,
       tech: ['React', 'Talwind CSS', 'Framer-motion', 'GSAP'],
       github: 'https://github.com/bhaktiagrawal088/Tajtaazagicatters',
       live: 'https://tajtaazagicatters.vercel.app/',
