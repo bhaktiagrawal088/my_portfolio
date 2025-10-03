@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Github, Linkedin, Code2, Download, ChevronDown, ChevronUp } from "lucide-react";
+import image from "../assets/image.png"
 
 const Sidebar = () => {
   const mobileContentRef = useRef(null);
@@ -80,7 +81,7 @@ const Sidebar = () => {
             Bhakti Agrawal
           </h1>
           <img
-            src="/src/assets/image.png"
+            src={image}
             alt="Bhakti Agrawal"
             className="w-48 xl:w-60 h-56 xl:h-72 object-cover shadow-2xl border-b-2 border-purple-300 border-blur border-opacity-20 rounded-b-2xl mx-auto"
           />
@@ -114,7 +115,7 @@ const Sidebar = () => {
           <div className="flex items-center justify-between w-full max-w-md">
             <div className="flex items-center space-x-3">
               <img
-                src="/src/assets/image.png"
+                src={image}
                 alt="Bhakti"
                 className="w-24 h-32 object-cover shadow-2xl border-b-2 border-purple-300 border-blur border-opacity-20 rounded-b-2xl "
               />
