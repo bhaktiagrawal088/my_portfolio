@@ -8,8 +8,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github } from 'lucide-react';
 import LogicLomm from "../assets/Logic-Loom.jpeg";
 import JobPortal from "../assets/job_portal1.png";
-import mediaGen from "../assets/MediaGen.jpg";
-import NotesIt from "../assets/Notes It.jpg"
+import mediaGen from "../assets/mediaGen.jpg";
+import NotesIt from "../assets/NotesIt.jpg"
 import walletApp from "../assets/walletApp.jpg"
 import jeton from "../assets/jeton.jpg"
 import foodwebsite from  "../assets/foodwebsite.jpg"
