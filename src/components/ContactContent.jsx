@@ -1,3 +1,6 @@
+
+
+// Contact.js
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -111,33 +114,33 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="w-4 h-4 sm:w-5 h-5 md:w-6 h-6" />,
       label: 'Email',
       value: 'bhaktiagrawal088@gmail.com'
     },
    
     {
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <MapPin className="w-4 h-4 sm:w-5 h-5 md:w-6 h-6" />,
       label: 'Location',
       value: 'India'
     }
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 px-6 relative">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" ref={sectionRef} className="py-10 mt-18 sm:py-16 md:py-20 px-4 sm:px-6 relative">
+      <div className="max-w-4xl sm:max-w-5xl md:max-w-7xl mx-auto">
         <h2
           ref={titleRef}
-          className="text-5xl md:text-6xl font-bold text-center text-white mb-16"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-10 sm:mb-12 md:mb-16"
         >
           Get In Touch
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16">
           {/* Contact Form */}
           <div>
             {!isSubmitted ? (
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <FormField label="Name" type="text" placeholder="Your full name" required />
                 <FormField label="Email" type="email" placeholder="your.email@example.com" required />
                 <FormField label="Subject" type="text" placeholder="What's this about?" required />
@@ -146,44 +149,44 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="submit-btn group w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="submit-btn group w-full py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isLoading ? (
                     <span>Sending...</span>
                   ) : (
                     <>
                       <span>Send Message</span>
-                      <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      <Send className="w-4 h-4 sm:w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </>
                   )}
                 </button>
               </form>
             ) : (
-              <div className="success-message text-center py-12">
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-300">Thanks for reaching out. I'll get back to you soon!</p>
+              <div className="success-message text-center py-8 sm:py-10 md:py-12">
+                <CheckCircle className="w-12 h-12 sm:w-14 h-14 md:w-16 h-16 text-green-500 mx-auto mb-4" />
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-gray-300 text-sm sm:text-base">Thanks for reaching out. I'll get back to you soon!</p>
               </div>
             )}
           </div>
 
           {/* Contact Info */}
           <div className="contact-info">
-            <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8">Let's Connect</h3>
+            <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               Ready to bring your ideas to life? Whether you have a project in mind or just want to chat about technology, I'd love to hear from you.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((item, index) => (
                 <ContactItem key={index} item={item} />
               ))}
             </div>
 
             {/* Social Links */}
-            <div className="mt-12">
-              <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+            <div className="mt-8 sm:mt-10 md:mt-12">
+              <h4 className="text-base sm:text-lg font-semibold text-white mb-3 sm:mb-4">Follow Me</h4>
+              <div className="flex space-x-3 sm:space-x-4">
                 <SocialButton href="https://github.com/bhaktiagrawal088" label="GitHub" />
                 <SocialButton href="https://www.linkedin.com/in/bhakti-agrawal-a88b51214/" label="LinkedIn" />
                 <SocialButton href="https://www.instagram.com/bhakti__agrawal06/?next=%2F" label="Instagram" />
@@ -233,7 +236,7 @@ const FormField = ({ label, type, placeholder, required }) => {
 
   return (
     <div ref={fieldRef} className="form-group">
-      <label className="block text-white font-medium mb-2">
+      <label className="block text-white font-medium mb-1 sm:mb-2 text-sm sm:text-base">
         {label} {required && <span className="text-purple-400">*</span>}
       </label>
       <InputComponent
@@ -242,7 +245,7 @@ const FormField = ({ label, type, placeholder, required }) => {
         placeholder={placeholder}
         required={required}
         rows={type === 'textarea' ? 4 : undefined}
-        className="w-full px-4 py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+        className="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 text-sm sm:text-base"
       />
     </div>
   );
@@ -272,13 +275,13 @@ const ContactItem = ({ item }) => {
   }, []);
 
   return (
-    <div ref={itemRef} className="contact-item flex items-center space-x-4 p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-colors duration-300">
+    <div ref={itemRef} className="contact-item flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 bg-gray-800/30 rounded-xl hover:bg-gray-800/50 transition-colors duration-300">
       <div className="text-purple-400">
         {item.icon}
       </div>
       <div>
-        <div className="text-sm text-gray-400">{item.label}</div>
-        <div className="text-white font-medium">{item.value}</div>
+        <div className="text-xs sm:text-sm text-gray-400">{item.label}</div>
+        <div className="text-white font-medium text-sm sm:text-base">{item.value}</div>
       </div>
     </div>
   );
@@ -305,7 +308,7 @@ const SocialButton = ({ href, label }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="px-6 py-2 bg-gray-800/50 text-white rounded-full hover:bg-purple-600/50 transition-colors duration-300"
+      className="px-4 sm:px-6 py-2 bg-gray-800/50 text-white rounded-full hover:bg-purple-600/50 transition-colors duration-300 text-sm sm:text-base"
     >
       {label}
     </a>
@@ -313,3 +316,4 @@ const SocialButton = ({ href, label }) => {
 };
 
 export default Contact;
+

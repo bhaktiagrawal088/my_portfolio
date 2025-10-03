@@ -1,11 +1,8 @@
-// Header.js
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { Menu, X } from "lucide-react";
 
 const Header = ({ setCurrentPage, currentPage }) => {
   const headerRef = useRef(null);
-  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     if (headerRef.current) {
@@ -28,18 +25,17 @@ const Header = ({ setCurrentPage, currentPage }) => {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 left-0 right-0 lg:left-1/4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white px-6 py-4 text-lg flex justify-between items-center shadow-lg z-30"
+      className="
+        fixed bottom-0 left-0 right-0   /* ✅ mobile: bottom bar */
+        lg:top-0 lg:bottom-auto lg:left-1/4  /* ✅ desktop: top */
+        bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 
+        text-white px-4 sm:px-6 py-3 sm:py-4 
+        text-sm sm:text-base lg:text-lg 
+        flex justify-around lg:justify-start lg:space-x-6 xl:space-x-8 
+        items-center shadow-lg z-30
+      "
     >
-      {/* Mobile Hamburger */}
-      <button
-        onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden text-purple-400"
-      >
-        {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-      </button>
-
-      {/* Desktop Nav */}
-      <nav className="hidden lg:flex space-x-8">
+      <nav className="flex w-full text-xl  justify-center items-center space-x-4 lg:space-x-8">
         {navItems.map((item) => (
           <button
             key={item.id}
@@ -59,28 +55,6 @@ const Header = ({ setCurrentPage, currentPage }) => {
           </button>
         ))}
       </nav>
-
-      {/* Mobile Dropdown */}
-      {mobileOpen && (
-        <nav className="absolute top-16 left-0 w-full bg-gray-900 flex flex-col items-center py-6 space-y-4 lg:hidden shadow-lg">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => {
-                setCurrentPage(item.id);
-                setMobileOpen(false);
-              }}
-              className={`text-lg ${
-                currentPage === item.id
-                  ? "text-purple-400 font-semibold"
-                  : "text-white hover:text-purple-300"
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
-      )}
     </header>
   );
 };

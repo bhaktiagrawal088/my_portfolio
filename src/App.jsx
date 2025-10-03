@@ -1,51 +1,52 @@
-// import React, { useEffect } from 'react';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import Hero from './components/Hero';
-// import Projects from './components/Projects';
-// import About from './components/About';
-// import Skills from './components/Skills';
-// import Contact from './components/Contact';
-// import ParticleBackground from './components/ParticleBackground';
+// // import React, { useEffect } from 'react';
+// // import { gsap } from 'gsap';
+// // import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// // import Hero from './components/Hero';
+// // import Projects from './components/Projects';
+// // import About from './components/About';
+// // import Skills from './components/Skills';
+// // import Contact from './components/Contact';
+// // import ParticleBackground from './components/ParticleBackground';
 
-// gsap.registerPlugin(ScrollTrigger);
+// // gsap.registerPlugin(ScrollTrigger);
 
-// function App() {
-//   useEffect(() => {
+// // function App() {
+// //   useEffect(() => {
 
-//     // Parallax effect for background elements
-//     gsap.utils.toArray('.parallax').forEach((element) => {
-//       gsap.to(element, {
-//         yPercent: -50,
-//         ease: "none",
-//         scrollTrigger: {
-//           trigger: element,
-//           start: "top bottom",
-//           end: "bottom top",
-//           scrub: true
-//         }
-//       });
-//     });
-//   }, []);
+// //     // Parallax effect for background elements
+// //     gsap.utils.toArray('.parallax').forEach((element) => {
+// //       gsap.to(element, {
+// //         yPercent: -50,
+// //         ease: "none",
+// //         scrollTrigger: {
+// //           trigger: element,
+// //           start: "top bottom",
+// //           end: "bottom top",
+// //           scrub: true
+// //         }
+// //       });
+// //     });
+// //   }, []);
 
-//   return (
-//     <div className="relative overflow-x-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
-//       <ParticleBackground />
-//       <Hero />
-//       <Projects />
-//       <About />
-//       <Skills />
-//       <Contact />
-//     </div>
-//   );
-// }
+// //   return (
+// //     <div className="relative overflow-x-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
+// //       <ParticleBackground />
+// //       <Hero />
+// //       <Projects />
+// //       <About />
+// //       <Skills />
+// //       <Contact />
+// //     </div>
+// //   );
+// // }
 
-// export default App;
+// // export default App;
 
-// App.js - Main App to Tie All Components
+
+
 import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
-import Header from './components/Header';
+ import Header from './components/Header';
 import HomeContent from './components/HomeContent';
 import PortfolioContent from './components/PortfolioContent';
 import AboutContent from './components/AboutContent';
@@ -70,7 +71,8 @@ const App = () => {
     <div className="min-h-screen bg-gray-900">
       <Sidebar />
       <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
-      <main className="ml-[25%] pt-16">
+      <main className="lg:ml-[25%] pt-16 pb-16 lg:pb-0">
+        {/* <MobileProfile /> */}
         {renderContent()}
       </main>
     </div>

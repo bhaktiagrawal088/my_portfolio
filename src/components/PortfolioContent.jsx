@@ -1,3 +1,6 @@
+
+
+
 // Projects.js - Updated Portfolio Page Component with GSAP + ScrollTrigger Animations
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
@@ -124,16 +127,16 @@ const Projects = () => {
     
   ];
   return (
-    <section id="projects" ref={sectionRef} className="py-20 px-6 relative">
-      <div className="max-w-7xl mx-auto">
+    <section id="portfolio" ref={sectionRef} className="py-10 mt-18 sm:py-16 md:py-20 px-4 sm:px-6 relative">
+      <div className="max-w-4xl sm:max-w-5xl md:max-w-7xl mx-auto">
         <h2
           ref={titleRef}
-          className="text-5xl md:text-6xl font-bold text-center text-white mb-16"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-10 sm:mb-12 md:mb-16"
         >
           Featured Projects
         </h2>
 
-        <div className="project-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="project-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
@@ -141,12 +144,12 @@ const Projects = () => {
 
          <h2
           ref={titleRef}
-          className="text-5xl md:text-6xl font-bold text-center text-white mb-16 mt-10"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white mb-10 sm:mb-12 md:mb-16 mt-8 sm:mt-10"
         >
           UI/UX Projects
         </h2>
 
-        <div className="project-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="project-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {UIprojects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
@@ -213,7 +216,7 @@ const ProjectCard = ({ project }) => {
       className="project-card group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-colors duration-300"
     >
       {/* Image */}
-      <div className="relative h-96 overflow-hidden">
+      <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
         <div
           ref={imageRef}
           className="w-full h-full bg-cover bg-center"
@@ -223,20 +226,20 @@ const ProjectCard = ({ project }) => {
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+      <div className="p-4 sm:p-5 md:p-6">
+        <h3 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-purple-400 transition-colors duration-300">
           {project.title}
         </h3>
-        <p className="text-gray-300 mb-4 leading-relaxed">
+        <p className="text-gray-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
           {project.description}
         </p>
 
         {/* Tech stack */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
           {project.tech.map((tech, i) => (
             <span
               key={i}
-              className="px-3 py-1 text-xs font-medium bg-purple-600/20 text-purple-300 rounded-full border border-purple-500/20"
+              className="px-2 sm:px-3 py-1 text-xs sm:text-xs font-medium bg-purple-600/20 text-purple-300 rounded-full border border-purple-500/20"
             >
               {tech}
             </span>
@@ -244,9 +247,9 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Links */}
-        <div className="flex space-x-2 mt-4">
-          <IconButton icon={<Github size={16} />} href={project.github} />
-          <IconButton icon={<ExternalLink size={16} />} href={project.live} />
+        <div className="flex space-x-2 mt-3 sm:mt-4">
+          <IconButton icon={<Github size={14} className="sm:size-16" />} href={project.github} />
+          <IconButton icon={<ExternalLink size={14} className="sm:size-16" />} href={project.live} />
         </div>
       </div>
     </div>
@@ -274,7 +277,7 @@ const IconButton = ({ icon, href }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors duration-300"
+      className="p-1 sm:p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors duration-300"
     >
       {icon}
     </a>
@@ -282,3 +285,4 @@ const IconButton = ({ icon, href }) => {
 };
 
 export default Projects;
+
