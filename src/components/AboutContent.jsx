@@ -31,7 +31,7 @@ const AboutContent = () => {
         ref={(el) => (sectionsRef.current[1] = el)}
         className="text-base sm:text-lg mb-10 md:mb-12 text-gray-300 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed text-center"
       >
-        I'm a <span className="text-purple-400 font-semibold">Full Stack Developer</span> 
+        I'm a <span className="text-purple-400 font-semibold">Full Stack Developer </span> 
         with hands-on experience building scalable web apps. Passionate about{" "}
         <span className="text-purple-300">AI integrations</span>, problem-solving, and 
         creating impactful digital solutions. <br />
@@ -69,7 +69,7 @@ const AboutContent = () => {
         className="mb-8 md:mb-12"
       >
         <h3 className="text-2xl sm:text-3xl font-semibold mb-4 md:mb-6 flex items-center gap-2">
-          <GraduationCap className="w-5 h-5 sm:w-6 h-6 md:w-7 h-7 text-purple-400" /> Education
+          <GraduationCap className="w-5 sm:w-6 md:w-7 h-7 text-purple-400" /> Education
         </h3>
         <ul className="space-y-3 sm:space-y-4">
           <li className="bg-gray-800 p-3 sm:p-4 rounded-lg shadow-md hover:shadow-purple-500/20 transition">

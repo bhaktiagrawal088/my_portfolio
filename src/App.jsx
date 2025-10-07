@@ -72,7 +72,6 @@ const App = () => {
       <Sidebar />
       <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
       <main className="lg:ml-[25%] pt-16 pb-16 lg:pb-0">
-        {/* <MobileProfile /> */}
         {renderContent()}
       </main>
     </div>

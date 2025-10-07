@@ -114,15 +114,15 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Mail className="w-4 h-4 sm:w-5 h-5 md:w-6 h-6" />,
+      icon: <Mail className="w-4  sm:w-5 h-5 md:w-6 " />,
       label: 'Email',
       value: 'bhaktiagrawal088@gmail.com'
     },
    
     {
-      icon: <MapPin className="w-4 h-4 sm:w-5 h-5 md:w-6 h-6" />,
+      icon: <MapPin className="w-4 sm:w-5 h-5 md:w-6" />,
       label: 'Location',
-      value: 'India'
+      value: 'Noida, India'
     }
   ];
 
@@ -156,14 +156,14 @@ const Contact = () => {
                   ) : (
                     <>
                       <span>Send Message</span>
-                      <Send className="w-4 h-4 sm:w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                      <Send className="w-4 h-4 sm:w-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </>
                   )}
                 </button>
               </form>
             ) : (
               <div className="success-message text-center py-8 sm:py-10 md:py-12">
-                <CheckCircle className="w-12 h-12 sm:w-14 h-14 md:w-16 h-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle className="w-12 h-12 sm:w-14  md:w-16  text-green-500 mx-auto mb-4" />
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">Message Sent!</h3>
                 <p className="text-gray-300 text-sm sm:text-base">Thanks for reaching out. I'll get back to you soon!</p>
               </div>

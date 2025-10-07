@@ -68,11 +68,11 @@ const HomeContent = () => {
 </h1>
 
         <h2 className="text-3xl sm:text-4xl font-bond text-purple-500">Full Stack Developer</h2>
-        <h2 className="text-3xl sm:text-4xl font-bond text-purple-500">and AI Enthusiast.</h2>
+        <h2 className="text-3xl sm:text-4xl font-bond text-purple-500"></h2>
            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
-          Building scalable web applications with <span className="text-purple-400">clean code </span> 
-          and <span className="text-pink-300">innovative AI solutions</span>. 
-          Passionate about turning ideas into impactful products.
+          I create reliable web apps using<span className="text-purple-400">clean code </span> 
+          and <span className="text-pink-300">smart AI tools.</span>. 
+          I enjoy turning ideas into impactful products.
         </p>
       </div>
     </div>
