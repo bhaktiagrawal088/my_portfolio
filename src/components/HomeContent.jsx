@@ -45,7 +45,7 @@ const HomeContent = () => {
   }, []);
 
   return (
-    <div id="home" className="relative min-h-screen flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+    <div id="home" className="relative min-h-[90vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
      <div
         ref={bubbleRef}
         className="absolute top-[-50px] right-[-50px] w-[20rem] sm:w-[24rem] md:w-[28rem] h-[20rem] sm:h-[24rem] md:h-[28rem] bg-gradient-to-br from-purple-600 to-pink-300 rounded-full opacity-40 blur-3xl"

@@ -248,8 +248,8 @@ const ProjectCard = ({ project }) => {
 
         {/* Links */}
         <div className="flex space-x-2 mt-3 sm:mt-4">
-          <IconButton icon={<Github size={14} className="sm:size-16" />} href={project.github} />
-          <IconButton icon={<ExternalLink size={14} className="sm:size-16" />} href={project.live} />
+          <IconButton icon={<Github size={14} className="sm:size-6" />} href={project.github} />
+          <IconButton icon={<ExternalLink size={14} className="sm:size-6" />} href={project.live} />
         </div>
       </div>
     </div>

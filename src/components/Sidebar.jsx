@@ -50,8 +50,8 @@ const Sidebar = () => {
       className="overflow-hidden flex flex-col items-center space-y-4 mt-2"
       style={{ height: 0, opacity: 0 }}
     >
-      <div className="text-center">
-        <p className="text-sm opacity-70">Based in</p>
+      <div className="text-center text-white">
+        <p className="text-sm opacity-70">Location</p>
         <p>Noida, India</p>
       </div>
 
@@ -64,7 +64,7 @@ const Sidebar = () => {
       <a
         href="/src/assets/BhaktiAgrawal_WebDeveloper.pdf"
         download
-        className="mt-2 flex items-center justify-center gap-2 py-2 px-4 bg-purple-600 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm sm:text-base"
+        className="mt-2 flex items-center justify-center gap-2 py-2 px-4 bg-purple-400 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm sm:text-base"
       >
         <Download size={16} />
         Download CV
@@ -90,7 +90,7 @@ const Sidebar = () => {
             <p className="font-medium text-purple-300">Full Stack Developer</p>
           </div>
           <div className="text-center">
-            <p className="text-sm opacity-70">Based in</p>
+            <p className="text-sm opacity-70">Location</p>
             <p>Noida, India</p>
           </div>
           <div className="flex space-x-4 xl:space-x-5 mt-2">
@@ -101,7 +101,7 @@ const Sidebar = () => {
           <a
             href="/src/assets/BhaktiAgrawal_WebDeveloper.pdf"
             download
-            className="mt-auto flex items-center gap-2 py-2 px-4 bg-purple-600 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm xl:text-base"
+            className="mt-auto flex items-center gap-2 py-2 px-4 bg-purple-400 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm xl:text-base"
           >
             <Download size={16} />
             Download CV

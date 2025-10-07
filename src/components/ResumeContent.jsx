@@ -76,7 +76,7 @@ const ResumeContent = () => {
               className="relative bg-gray-800 p-3 sm:p-5 rounded-lg shadow-md hover:shadow-purple-500/20 transition text-sm sm:text-base"
             >
               {/* Timeline Dot */}
-              <span className="absolute -left-2 sm:-left-3 top-4 sm:top-5 w-3 sm:w-4 h-3 sm:h-4 bg-purple-500 rounded-full shadow"></span>
+              {/* <span className="absolute -left-2 sm:-left-3 top-4 sm:top-5 w-3 sm:w-4 h-3 sm:h-4 bg-purple-500 rounded-full shadow"></span> */}
               {course}
             </li>
           ))}
