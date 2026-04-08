@@ -76,13 +76,13 @@ const MobileProfile = () => {
 
       {/* Download CV Button */}
        <a
-                
-        href="https://drive.google.com/uc?export=download&id=1jydQHSky01KFVgOmJkUBAfZqm6Y2gIBk"
-        className="mt-auto flex items-center gap-2 py-2 px-4 bg-purple-400 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm xl:text-base"
-      >
-        <Download size={16} />
-        Download CV
-      </a>
+  href="/BhaktiAgrawal_WebDeveloper.pdf"
+  download="Bhakti_Agrawal_CV.pdf"
+  className="mt-auto flex items-center gap-2 py-2 px-4 bg-purple-400 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm xl:text-base"
+>
+  <Download size={16} />
+  Download CV
+</a>
     </div>
   );
 };
