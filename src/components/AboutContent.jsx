@@ -27,16 +27,13 @@ const AboutContent = () => {
       </h2>
 
       {/* Intro */}
-      <p
-        ref={(el) => (sectionsRef.current[1] = el)}
-        className="text-base sm:text-lg mb-10 md:mb-12 text-gray-300 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed text-center"
-      >
-        I'm a <span className="text-purple-400 font-semibold">Full Stack Developer </span> 
-        with hands-on experience building scalable web apps. Passionate about{" "}
-        <span className="text-purple-300">AI integrations</span>, problem-solving, and 
-        creating impactful digital solutions. <br />
-        Solved <span className="font-semibold">150+ LeetCode</span> problems and continuously learning new tech.
-      </p>
+     <p
+  ref={(el) => (sectionsRef.current[1] = el)}
+  className="text-base sm:text-lg mb-10 md:mb-12 text-gray-300 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed text-center"
+>
+  Full Stack Developer building scalable, responsive web applications. 
+  Strong in problem-solving, clean code, and performance optimization.
+</p>
 
       {/* Experience Section */}
       <div
@@ -47,6 +44,12 @@ const AboutContent = () => {
           <Briefcase className="w-5 sm:w-6 md:w-7 h-7 text-purple-400" /> Experience
         </h3>
         <ul className="space-y-4 sm:space-y-6">
+         <li className="bg-gray-800 p-3 sm:p-4 md:p-5 rounded-lg shadow-md hover:shadow-purple-500/20 transition">
+            <p className="font-semibold text-purple-300 text-sm sm:text-base">
+              Web Developer and 3d Designer <span className="text-gray-400">(November - Present)</span>
+            </p>
+            <p className="text-gray-400 text-sm sm:text-base">  Developed and maintained the company website using WordPress with Firebase phone authentication and Razorpay integration for secure transactions. Improved performance through CDN, caching, and server optimization (PageSpeed 55 → 88). Managed 10+ Meta ad campaigns driving ~50% sales growth. Created 50+ 3D product models using Blender and designed 50+ brand logos using CorelDRAW.</p>
+          </li>
           <li className="bg-gray-800 p-3 sm:p-4 md:p-5 rounded-lg shadow-md hover:shadow-purple-500/20 transition">
             <p className="font-semibold text-purple-300 text-sm sm:text-base">
               Freelance Full Stack Developer <span className="text-gray-400">(June - September 2025)</span>

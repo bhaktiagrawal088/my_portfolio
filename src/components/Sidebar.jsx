@@ -99,7 +99,7 @@ const Sidebar = () => {
             ))}
           </div>
           <a
-            href="/src/assets/BhaktiAgrawal_WebDeveloper.pdf"
+            href="https://drive.google.com/file/d/1jydQHSky01KFVgOmJkUBAfZqm6Y2gIBk/view?usp=sharing"
             download
             className="mt-auto flex items-center gap-2 py-2 px-4 bg-purple-400 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm xl:text-base"
           >

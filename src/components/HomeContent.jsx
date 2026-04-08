@@ -67,13 +67,12 @@ const HomeContent = () => {
   />
 </h1>
 
-        <h2 className="text-3xl sm:text-4xl font-bond text-purple-500">Full Stack Developer</h2>
-        <h2 className="text-3xl sm:text-4xl font-bond text-purple-500"></h2>
-           <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
-          I create reliable web apps using<span className="text-purple-400">clean code </span> 
-          and <span className="text-pink-300">smart AI tools.</span>. 
-          I enjoy turning ideas into impactful products.
-        </p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-purple-500">
+  Full Stack Developer
+</h2>
+<p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 opacity-90 leading-relaxed">
+  Full Stack Developer building fast, scalable, and user-focused web applications.
+</p>
       </div>
     </div>
   );  
