@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Github, Linkedin, Code2, Download, Mail, MapPin } from "lucide-react"; // icons
+import profileImg from "../assets/image.png";
+
 
 const MobileProfile = () => {
   const profileRef = useRef(null);
@@ -23,6 +25,15 @@ const MobileProfile = () => {
     }
   }, []);
 
+  const handleDownload = () => {
+  const link = document.createElement("a");
+  link.href = "/BhaktiAgrawal_WebDeveloper.pdf";
+  link.download = "Bhakti_Agrawal_CV.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   return (
     <div
       ref={profileRef}
@@ -35,7 +46,7 @@ const MobileProfile = () => {
 
       {/* Profile Pic */}
       <img
-        src="/src/assets/image.png"
+        src={profileImg}
         alt="Bhakti Agrawal"
         className="w-40 sm:w-48 h-48 sm:h-56 object-cover shadow-2xl border-b-2 border-purple-300 border-blur border-opacity-20 rounded-b-2xl"
       />
@@ -74,15 +85,13 @@ const MobileProfile = () => {
         />
       </div>
 
-      {/* Download CV Button */}
-       <a
-  href="/BhaktiAgrawal_WebDeveloper.pdf"
-  download="Bhakti_Agrawal_CV.pdf"
-  className="mt-auto flex items-center gap-2 py-2 px-4 bg-purple-400 rounded-md hover:bg-purple-500 transition-colors shadow-lg text-sm xl:text-base"
+     <button
+  onClick={handleDownload}
+  className="mt-4 flex items-center justify-center gap-2 py-3 px-5 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 transition-all shadow-lg w-full"
 >
-  <Download size={16} />
+  <Download size={18} />
   Download CV
-</a>
+</button>
     </div>
   );
 };
